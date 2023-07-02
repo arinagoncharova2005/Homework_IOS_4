@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  hw4_new
+//  hw4
 //
-//  Created by Arina Goncharova on 02.07.2023.
+//  Created by Arina Goncharova on 30.06.2023.
 //
 
 import UIKit
