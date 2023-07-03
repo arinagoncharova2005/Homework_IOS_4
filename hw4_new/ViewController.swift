@@ -45,7 +45,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         characterViewController.data = data[indexPath.row]
         
-        print("you tapped me!")
     }
 
 // MARK: - UITableViewDataSource
@@ -88,7 +87,9 @@ extension ViewController: CharacterViewControllerDelegate {
     func updateCharacterLocation(with id: UUID, location newLocation: String) {
         if let index = data.firstIndex(where: { $0.id == id }){
             data[index].location = newLocation
-            tableView.reloadData()
+//            tableView.reloadData()
+            let indexPath = IndexPath(row: index, section: 0)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
         }
         
     }
